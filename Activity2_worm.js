@@ -1,4 +1,4 @@
-//Nikolas Zahorian(naz5617) CSEC-380 HW 6 Act 2
+//Nikolas Zahorian(naz5617) CSEC-380 HW 6 Act 2 
 
 //Adding friends
 $.get("add_friend.php", {'id': 67})
